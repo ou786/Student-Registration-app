@@ -1,0 +1,42 @@
+<h2>Student Registration</h2>
+<form (ngSubmit)="onSubmit()" #studentForm="ngForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" [(ngModel)]="student.name" required>
+
+  <label for="dob">Date of Birth:</label>
+  <input type="date" id="dob" name="dob" [(ngModel)]="student.dob" required>
+
+  <label for="gender">Gender:</label>
+  <select id="gender" name="gender" [(ngModel)]="student.gender" required>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+  </select>
+
+  <!-- Add more form fields for other student information -->
+
+  <button type="submit" [disabled]="!studentForm.valid">Register</button>
+</form>
+
+<hr>
+
+<h2>Student List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Date of Birth</th>
+      <th>Gender</th>
+      <!-- Add more table headers for other student information -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{ student.name }}</td>
+      <td>{{ student.dob }}</td>
+      <td>{{ student.gender }}</td>
+      <!-- Display other student information in corresponding table cells -->
+    </tr>
+  </tbody>
+</table>
+
