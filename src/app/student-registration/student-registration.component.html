@@ -12,6 +12,17 @@
     <option value="female">Female</option>
     <option value="other">Other</option>
   </select>
+  <label for="address">Address:</label>
+  <input type="text" id="address" name="address" [(ngModel)]="student.address" required>
+
+  <label for="ph">Phone:</label>
+  <input type="text" id="ph" name="ph" [(ngModel)]="student.ph" required>
+
+  <label for="grade">Grade:</label>
+  <input type="text" id="grade" name="grade" [(ngModel)]="student.grade" required>
+
+  <label for="parentsName">Parent's Name:</label>
+  <input type="text" id="parentsName" name="parentsName" [(ngModel)]="student.parentsName" required>
 
   <!-- Add more form fields for other student information -->
 
@@ -35,6 +46,10 @@
       <td>{{ student.name }}</td>
       <td>{{ student.dob }}</td>
       <td>{{ student.gender }}</td>
+      <td>{{ student.address }}</td>
+      <td>{{ student.ph }}</td>
+      <td>{{ student.grade }}</td>
+      <td>{{ student.parentsName }}</td>
       <!-- Display other student information in corresponding table cells -->
     </tr>
   </tbody>
