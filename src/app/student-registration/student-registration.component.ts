@@ -3,14 +3,17 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-student-registration',
   templateUrl: './student-registration.component.html',
-  styleUrls: ['./student-registration.component.css']
+  styleUrls: ['./student-registration.component.css'],
 })
 export class StudentRegistrationComponent {
   student = {
     name: '',
     dob: '',
-    gender: ''
-    // Add more properties for other student information
+    gender: '',
+    address: '',
+    ph: '',
+    grade: '',
+    parentsName: '', // Add more properties for other student information
   };
 
   students: any[] = [];
@@ -20,7 +23,11 @@ export class StudentRegistrationComponent {
     this.student = {
       name: '',
       dob: '',
-      gender: ''
+      gender: '',
+      address: '',
+      ph: '',
+      grade: '',
+      parentsName: '',
       // Reset other student properties
     };
   }
