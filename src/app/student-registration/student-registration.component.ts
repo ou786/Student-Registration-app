@@ -9,7 +9,11 @@ export class StudentRegistrationComponent {
   student = {
     name: '',
     dob: '',
-    gender: ''
+    gender: '',
+    address: '',
+    ph: '',
+    grade: '',
+    parentsName: ''
     // Add more properties for other student information
   };
 
@@ -20,7 +24,11 @@ export class StudentRegistrationComponent {
     this.student = {
       name: '',
       dob: '',
-      gender: ''
+      gender: '',
+      address: '',
+    ph: '',
+    grade: '',
+    parentsName: ''
       // Reset other student properties
     };
   }
