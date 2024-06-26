@@ -10,26 +10,34 @@ export class StudentRegistrationComponent {
     name: '',
     dob: '',
     gender: '',
+    email: '',
     address: '',
     ph: '',
     grade: '',
     parentsName: ''
-    // Add more properties for other student information
   };
 
   students: any[] = [];
 
   onSubmit() {
     this.students.push({ ...this.student });
+    this.clearForm();
+  }
+
+  deleteStudent(index: number) {
+    this.students.splice(index, 1);
+  }
+
+  clearForm() {
     this.student = {
       name: '',
       dob: '',
       gender: '',
+      email: '',
       address: '',
-    ph: '',
-    grade: '',
-    parentsName: ''
-      // Reset other student properties
+      ph: '',
+      grade: '',
+      parentsName: ''
     };
   }
 }
