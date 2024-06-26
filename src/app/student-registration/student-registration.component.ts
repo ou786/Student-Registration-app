@@ -29,7 +29,6 @@ export class StudentRegistrationComponent {
     ph: '',
     grade: '',
     parentsName: ''
-      // Reset other student properties
     };
   }
 }
